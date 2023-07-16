@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Button -->
+    <string name="add_item_button_desc">add item</string>
+    <string name="no_data_current">No cicilan record yet</string>
+    <string name="no_data_current_message">You haven\'t cicilan record. To add record, hit the add button (+) in the bottom right corner.</string>
+    <string name="no_data_done">No cicilan done record yet</string>
+    <string name="no_data_done_message">You haven\'t cicilan done record. The cicilan done record will appear here.</string>
+    <string name="save_button_title">Save</string>
+    <string name="save_button_desc">save button</string>
+    <string name="choose_image_from">Choose image from</string>
+    <string name="gallery">Internal storage</string>
+    <string name="camera">Capture from camera</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="ok_button">OK</string>
+    <string name="update_button">Edit</string>
+    <string name="delete_button">Delete</string>
+    <string name="cetak_button">Print</string>
+    <string name="pay_debt">Pay debt</string>
+    <!-- Button -->
+
+    <!-- Form validation -->
+    <string name="fill_data">Shouldn\'t be empty</string>
+    <string name="form_date_tenggat">more than 30 days of calendar</string>
+    <string name="form_date_periode">Period more than 12 months</string>
+    <string name="form_min_harga" tools:keep="@string/form_min_harga">Price min. 500K</string>
+    <string name="form_max_harga">Price max. 10 billion</string>
+    <string name="form_dp">First pay min. 300 hundred</string>
+    <string name="form_dp_lessThan_harga">Should less than thing price</string>
+    <string name="input_fill_over">Over than remain amount</string>
+    <string name="input_min_limit">Pay min. 100 hundred</string>
+    <string name="filled_price">Filled the thing price first</string>
+    <!-- Form validation -->
+
+    <!-- Confirm dialog -->
+    <string name="confirm_delete_data">Are you sure want to delete ?</string>
+    <!-- Confirm dialog -->
+
+    <!-- Home Menu -->
+    <string name="debt_now">Done yet</string>
+    <string name="debt_done">Done</string>
+    <!-- Home Menu -->
+
+    <!-- Add Item Menu -->
+    <string name="add_image_here">Add image here</string>
+    <string name="penyicil">Person</string>
+    <string name="barang">Thing</string>
+    <string name="durasi_dan_periode">Duration and period</string>
+    <string name="User_name">Nama person</string>
+    <string name="User_thing">Nama stuff</string>
+    <string name="User_category">Category</string>
+    <string name="User_price">Price</string>
+    <string name="User_first_pay">First pay</string>
+    <string name="User_duration_pay">Period of cicilan</string>
+    <string name="User_period_date">Expired on</string>
+    <string name="cancel_direction">Canceled</string>
+    <string name="add_item_image_desc">Add item image preview</string>
+    <string name="add_data">Add cicilan</string>
+    <!-- Add Item Menu -->
+
+    <!-- Category Item -->
+    <string-array name="data_category">
+        <item>Hand phone</item>
+        <item>Laptop</item>
+        <item>Kulkas</item>
+        <item>Mesin cuci</item>
+        <item>Lemari</item>
+        <item>Kursi</item>
+        <item>Meja</item>
+        <item>Karpet</item>
+        <item>Pendingin (AC)</item>
+    </string-array>
+    <!-- Category Item -->
+
+    <!-- Crop Image -->
+    <string name="rotate">Rotate</string>
+    <string name="crop_image">Crop image</string>
+    <!-- Crop Image -->
+
+    <!-- Dialog Lunas -->
+    <string name="hore">Congratulations !</string>
+    <string name="congrats_lunas">Your cicilan on this item has been done totally.</string>
+    <string name="lunas_at">Finish at</string>
+    <!-- Dialog Lunas -->
+
+    <!-- Dialog Preview Image -->
+    <string name="no_image_found">No image here</string>
+    <!-- Dialog Preview Image -->
+
+    <!-- Detail Item Menu -->
+    <string name="avatar_preview_desc">Image preview</string>
+    <string name="created_at_title">Dicicil at</string>
+    <string name="lunas">Done</string>
+    <string name="sisa">Remaining</string>
+    <string name="detail_laba">Detail laba</string>
+    <string name="laba">Laba</string>
+    <string name="per_bulan">/month</string>
+    <string name="total_laba">Total laba</string>
+    <string name="detail_nominal">Detail cicilan</string>
+    <string name="user_nominal_cicilan">amount of cicilan</string>
+    <string name="per_bulan_bayar">Per month</string>
+    <string name="total_per_bulan">Total per month</string>
+    <string name="expire_periode">Periode pembayaran setiap tanggal</string>
+    <string name="periode_bulan">Month</string>
+    <string name="log_transaction">See transaction</string>
+    <string name="deleted_successfully">deleted Successfully</string>
+
+    <string name="fill_periode_max" tools:keep="@string/fill_periode_max">Periode bayar per month</string>
+    <string name="recent_cicilan" tools:keep="@string/recent_cicilan">Tersisa</string>
+    <string name="input_over">Over as expect</string>
+    <string name="nominal_lunas" tools:keep="@string/nominal_lunas">Telah lunas</string>
+    <string name="input_nominal" tools:keep="@string/input_nominal">Input amount</string>
+    <string name="calculate_result" tools:keep="@string/calculate_result">Hitungan sementara</string>
+    <string name="cicilan_per_bulan">Cicilan per bulan</string>
+
+    <string name="choose_image_here" tools:keep="@string/choose_image_here">Choose image from here</string>
+    <string name="proses_cicilan" tools:keep="@string/proses_cicilan">Proses cicilan</string>
+    <string name="detail_barang">Detail barang</string>
+    <string name="edit_data">Edit cicilan</string>
+
+    <!-- Mini calculator cicilan dialog -->
+    <string name="prediksi_cicilan">Prediksi cicilan</string>
+    <string name="calculating">Calculating</string>
+    <!-- Mini calculator cicilan dialog -->
+
+    <!-- Detail Log transaction -->
+    <string name="detail_transaction">Detail transaction</string>
+    <string name="no_transaction">No transaction found</string>
+    <string name="message_transaction">You might not make any payment of cicilan on this item.</string>
+    <!-- Detail Log transaction -->
+
+    <!-- Menu Settings -->
+    <string name="setting_title">Settings</string>
+    <string name="note_here">Note something(opsional)</string>
+    <string name="app_about_desc">This app provide to manage cicilan</string>
+    <string name="more_about_app">For more, touch in developer at :</string>
+    <string name="cek_pembaruan">Check update</string>
+
+    <!-- Setting menu preferences -->
+    <string name="label_theme_language">Theme and language</string>
+    <string name="change_theme">Theme</string>
+    <string name="change_language">Language</string>
+
+    <string name="label_about" tools:keep="@string/label_about">About app</string>
+    <string name="title_share_feedback">Share feedback</string>
+    <string name="title_rate_app">Rate app</string>
+    <string name="title_about">About app</string>
+    <string name="title_version">Version</string>
+
+    <string-array name="title_theme">
+        <item>Terang</item>
+        <item>Gelap</item>
+        <item>Mengikut sistem</item>
+    </string-array>
+
+    <string-array name="value_theme">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System default</item>
+    </string-array>
+
+    <string-array name="title_language">
+        <item>Indonesia</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="value_language">
+        <item>in</item>
+        <item>en-US</item>
+    </string-array>
+</resources>

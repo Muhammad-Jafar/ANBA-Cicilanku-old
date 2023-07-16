@@ -1,0 +1,57 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/label_theme_language">
+
+        <ListPreference
+            app:defaultValue="@string/default_theme"
+            app:entries="@array/title_theme"
+            app:entryValues="@array/value_theme"
+            app:icon="@drawable/icon_theme"
+            app:key="@string/key_theme"
+            app:summary="Tema aplikasi"
+            app:title="@string/change_theme"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="@string/default_language"
+            app:entries="@array/title_language"
+            app:entryValues="@array/value_language"
+            app:icon="@drawable/icon_language"
+            app:key="@string/key_language"
+            app:title="@string/change_language"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:iconSpaceReserved="false"
+        app:title="@string/key_about">
+
+        <Preference
+            app:icon="@drawable/icon_feedback"
+            app:summary="Masukan anda sangat"
+            app:key="@string/key_feedback"
+            app:title="@string/title_share_feedback" />
+
+        <Preference
+            app:icon="@drawable/icon_rate"
+            app:summary="Berikan nilai untuk kepuasan anda"
+            app:key="@string/key_rating"
+            app:title="@string/title_rate_app" />
+
+        <Preference
+            app:fragment="jafar.cicilan.ui.main.settings.about.AboutFragment"
+            app:icon="@drawable/icon_about"
+            app:summary="Cek lebih lanjut"
+            app:key="@string/key_about"
+            app:title="@string/title_about" />
+
+        <Preference
+            app:icon="@drawable/icon_version"
+            app:summary="@string/value_version"
+            app:title="@string/title_version" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

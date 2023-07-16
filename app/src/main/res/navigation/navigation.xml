@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="jafar.cicilan.ui.main.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/main_home">
+        <action
+            android:id="@+id/action_main_to_form"
+            app:destination="@id/formAddFragment" />
+        <action
+            android:id="@+id/action_main_to_current_detail"
+            app:destination="@id/detailCicilanBerjalanFragment" />
+        <action
+            android:id="@+id/action_main_to_done_detail"
+            app:destination="@id/detailCicilanLunasFragment" />
+        <action
+            android:id="@+id/action_main_to_settings"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formAddFragment"
+        android:name="jafar.cicilan.ui.main.form.FormAddFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/main_form_add">
+        <action
+            android:id="@+id/action_form_to_image_crop"
+            app:destination="@id/imageCropFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageCropFragment"
+        android:name="jafar.cicilan.ui.main.form.CropImageFragment"
+        android:label="fragment_image_crop"
+        tools:layout="@layout/main_image_crop">
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailCicilanBerjalanFragment"
+        android:name="jafar.cicilan.ui.main.home.current.CurrentDetailFragment"
+        tools:layout="@layout/main_detail_current">
+        <argument
+            android:name="cicilanId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailBerjalan_to_Log"
+            app:destination="@id/detailLogFragment" />
+        <action
+            android:id="@+id/action_detailBerjalan_to_previewImage"
+            app:destination="@id/previewImageFragment" />
+        <action
+            android:id="@+id/action_detailCicilanBerjalan_to_formEdit"
+            app:destination="@id/formEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailCicilanLunasFragment"
+        android:name="jafar.cicilan.ui.main.home.done.DoneDetailFragment"
+        tools:layout="@layout/main_detail_done">
+        <argument
+            android:name="cicilanId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailLunas_to_Log"
+            app:destination="@id/detailLogFragment" />
+        <action
+            android:id="@+id/action_detailLunas_to_previewImage"
+            app:destination="@id/previewImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailLogFragment"
+        android:name="jafar.cicilan.ui.main.home.detail.DetailLogFragment"
+        android:label="main_cicilan_berjalan_detail_log"
+        tools:layout="@layout/main_detail_log">
+        <argument
+            android:name="cicilanId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="jafar.cicilan.ui.main.settings.SettingsFragment"
+        android:label="main_settings"
+        tools:layout="@layout/main_settings">
+        <action
+            android:id="@+id/action_settings_to_about"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="jafar.cicilan.ui.main.settings.about.AboutFragment"
+        android:label="main_settings_about"
+        tools:layout="@layout/main_settings_about" />
+
+    <fragment
+        android:id="@+id/previewImageFragment"
+        android:name="jafar.cicilan.ui.main.home.detail.PreviewImageFragment"
+        android:label="main_cicilan_detail_preview"
+        tools:layout="@layout/main_detail_preview">
+        <argument
+            android:name="cicilanId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formEditFragment"
+        android:name="jafar.cicilan.ui.main.form.FormEditFragment"
+        android:label="main_form_edit"
+        tools:layout="@layout/main_form_edit">
+
+        <action
+            android:id="@+id/action_formEdit_to_imageCrop"
+            app:destination="@id/imageCropFragment" />
+
+        <argument
+            android:name="item"
+            app:argType="jafar.cicilan.data.model.ItemEntity"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>

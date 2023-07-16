@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Elevated"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar"
+            android:layout_width="128dp"
+            android:layout_height="0dp"
+            android:background="?attr/colorSecondaryContainer"
+            android:contentDescription="@string/add_item_image_desc"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nameProduct"
+            style="@style/HeadingSubTitle"
+            android:layout_width="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/nameUser"
+            style="@style/BodyTitle"
+            android:layout_width="0dp"
+            android:textColor="?attr/colorControlNormal"
+            app:layout_constraintEnd_toEndOf="@+id/nameProduct"
+            app:layout_constraintStart_toStartOf="@+id/nameProduct"
+            app:layout_constraintTop_toBottomOf="@+id/nameProduct"
+            tools:text="@tools:sample/first_names" />
+
+        <TextView
+            android:id="@+id/cicilanPerBulan"
+            style="@style/BodyContent"
+            android:layout_width="0dp"
+            android:textColor="?attr/colorLeaf"
+            app:layout_constraintStart_toStartOf="@+id/nameUser"
+            app:layout_constraintTop_toBottomOf="@+id/nameUser"
+            app:layout_constraintEnd_toEndOf="@+id/nameUser"
+            tools:text="Rp 375.000,00" />
+
+        <TextView
+            android:id="@+id/lunasPadaTitle"
+            style="@style/BodySubContent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/lunas_at"
+            android:textColor="?attr/colorControlActivated"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toBottomOf="@+id/cicilanPerBulan" />
+
+        <TextView
+            android:id="@+id/lunasPada"
+            style="@style/BodySubContent"
+            android:layout_marginStart="4dp"
+            android:textColor="?attr/colorControlActivated"
+            app:layout_constraintStart_toEndOf="@+id/lunasPadaTitle"
+            app:layout_constraintTop_toTopOf="@+id/lunasPadaTitle"
+            tools:text="18 Februari 2023" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

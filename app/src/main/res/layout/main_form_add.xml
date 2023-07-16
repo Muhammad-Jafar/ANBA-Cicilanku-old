@@ -1,0 +1,262 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="true"
+    tools:context="jafar.cicilan.ui.main.form.FormAddFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolbarTheme"
+            app:navigationIcon="@drawable/icon_close"
+            app:title="@string/add_data">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveButton"
+                style="@style/CustomTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/save_button_desc"
+                android:padding="0dp"
+                android:text="@string/save_button_title"
+                android:textStyle="bold" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollForm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/saveImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:contentDescription="@string/add_item_image_desc"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/icon_broken_image_black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/nameTitle"
+                style="@style/HeadingSubTitle"
+                android:layout_marginTop="24dp"
+                android:text="@string/penyicil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameInputLayout"
+                style="@style/CustomInputLayout"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/thingTitle"
+                style="@style/HeadingSubTitle"
+                android:layout_marginTop="24dp"
+                android:text="@string/barang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameInputLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/thingInputLayout"
+                style="@style/CustomInputLayout"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thingTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/thingInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_thing"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/categoryInputLayout"
+                style="@style/CustomAutoCompleteLayout"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/thingInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/thingInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/thingInputLayout">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/categoryInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_category"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:labelFor="@+id/categoryInput"
+                    app:simpleItems="@array/data_category" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/priceInputLayout"
+                style="@style/CustomInputLayout"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/categoryInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/categoryInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/categoryInputLayout"
+                app:prefixText="Rp. ">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/priceInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_price"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstInputLayout"
+                style="@style/CustomInputLayout"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/priceInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/priceInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/priceInputLayout"
+                app:prefixText="Rp. ">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstPayInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_first_pay"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/durationPeriodeTitle"
+                style="@style/HeadingSubTitle"
+                android:layout_marginTop="24dp"
+                android:text="@string/durasi_dan_periode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstInputLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/periodInputLayout"
+                style="@style/CustomInputLayout"
+                android:layout_width="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tenggatInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/durationPeriodeTitle"
+                app:suffixText="Bulan">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/periodPayInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_duration_pay"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:labelFor="@+id/durationPayInput" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tenggatInputLayout"
+                style="@style/CustomInputLayout"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/periodInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/durationPeriodeTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tenggatPayInput"
+                    style="@style/CustomInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/User_period_date"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:labelFor="@+id/durationPayInput" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

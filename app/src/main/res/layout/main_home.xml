@@ -1,0 +1,188 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionGroup="true"
+    tools:context="jafar.cicilan.ui.main.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:statusBarScrim="?attr/colorSurface"
+            app:toolbarId="@+id/toolbar">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolbarTheme"
+                android:layout_height="48dp"
+                android:layout_gravity="top"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                app:layout_collapseMode="none">
+
+                <TextView
+                    style="@style/HeadingApp"
+                    android:text="@string/app_name" />
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardContainer"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/belumLunasCard"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sudahLunasCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/iconBelumLunas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/rose"
+                            app:contentPadding="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+                            app:srcCompat="@drawable/icon_current" />
+
+                        <TextView
+                            android:id="@+id/belumLunasContent"
+                            style="@style/BodyHeadContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:text="@string/number_cicilan"
+                            android:textColor="?attr/colorOnRoseContainer"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/belumLunasTitle"
+                            app:layout_constraintEnd_toStartOf="@+id/belumLunasTitle"
+                            app:layout_constraintTop_toTopOf="@+id/belumLunasTitle" />
+
+                        <TextView
+                            android:id="@+id/belumLunasTitle"
+                            style="@style/BodyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/debt_now"
+                            android:textColor="?attr/colorOnRoseContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/iconBelumLunas"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/sudahLunasCard"
+                    style="@style/Widget.Material3.CardView.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/belumLunasCard"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/iconSudahLunas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/leaf"
+                            app:contentPadding="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+                            app:srcCompat="@drawable/icon_done" />
+
+                        <TextView
+                            android:id="@+id/sudahLunasContent"
+                            style="@style/BodyHeadContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:text="@string/number_cicilan"
+                            android:textColor="?attr/colorOnLeafContainer"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/sudahLunasTitle"
+                            app:layout_constraintEnd_toStartOf="@+id/sudahLunasTitle"
+                            app:layout_constraintTop_toTopOf="@+id/sudahLunasTitle" />
+
+                        <TextView
+                            android:id="@+id/sudahLunasTitle"
+                            style="@style/BodyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/debt_done"
+                            android:textColor="?attr/colorOnLeafContainer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/iconSudahLunas"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/CustomTabLayout"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="128dp"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewOfTabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addItem"
+        style="@style/CustomFAB"
+        android:layout_gravity="bottom|end"
+        android:contentDescription="@string/add_item_button_desc"
+        android:src="@drawable/icon_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

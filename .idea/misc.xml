@@ -1,0 +1,112 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.385" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/app_logo.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/bg_main_cardview.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/ic_icon_arrow.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/ic_launcher_background.xml" value="0.385" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_about.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_add.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_arrow.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_dark_theme.xml" value="0.386" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_export.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_import.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_license.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_light_theme.xml" value="0.386" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_rupiah.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_settings.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/icon_theme.xml" value="0.363" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/thumb.xml" value="0.386" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/drawable/track.xml" value="0.386" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/font/main_font.xml" value="0.39114583333333336" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/activity_main.xml" value="0.47440273037542663" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/activity_menu_about.xml" value="0.29713552800342025" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/add_new.xml" value="0.67" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/fragment_about_app.xml" value="0.29713552800342025" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/fragment_cicilan_berjalan.xml" value="0.4435226547543076" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/fragment_cicilan_lunas.xml" value="0.4435226547543076" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/fragment_set_theme.xml" value="0.67" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/list_item.xml" value="0.7222757955641272" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/list_item_fix.xml" value="0.67" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/menu_about.xml" value="0.25" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/setting_menu.xml" value="0.9" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/layout/splash_screen.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Inisialku#9147/AndroidStudioProjects/Cicilan/app/src/main/res/menu/option_menu.xml" value="0.67" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/jafar/cicilan/utils/CustomClickListener.kt" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.CustomClickListenerKt void setSafeOnClickListener(android.view.View $this$setSafeOnClickListener, kotlin.jvm.functions.Function1&lt;? super android.view.View,kotlin.Unit&gt; onSafeClick)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void addAutoConverterToMoneyFormat(com.google.android.material.textfield.TextInputEditText $this$addAutoConverterToMoneyFormat, com.google.android.material.textfield.TextInputLayout layout)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void afterInputNumberChanged(com.google.android.material.textfield.TextInputEditText $this$afterInputNumberChanged, kotlin.jvm.functions.Function1&lt;? super java.lang.Integer,kotlin.Unit&gt; afterTextChanged)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void afterInputStringChanged(com.google.android.material.textfield.TextInputEditText $this$afterInputStringChanged, kotlin.jvm.functions.Function1&lt;? super java.lang.String,kotlin.Unit&gt; afterTextChanged)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt int dotPixel(int $this$dotPixel)" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/jafar/cicilan/utils/Extensions.kt" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt java.lang.String format(long $this$format, java.lang.String pattern)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt int getNumber(android.text.Editable $this$getNumber)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void loadImage(androidx.fragment.app.Fragment $this$loadImage, java.lang.String imageAddress, android.widget.ImageView imageView)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void loadImageWithShareTransition(androidx.fragment.app.Fragment $this$loadImageWithShareTransition, java.lang.String imageAddress, android.widget.ImageView imageView)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt kotlinx.coroutines.Job runInBackground(androidx.lifecycle.ViewModel $this$runInBackground, kotlin.jvm.functions.Function2&lt;? super kotlinx.coroutines.CoroutineScope,? super kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt;,? extends java.lang.Object&gt; action)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt kotlinx.coroutines.Job runWhenCreated(androidx.fragment.app.Fragment $this$runWhenCreated, kotlin.jvm.functions.Function2&lt;? super kotlinx.coroutines.CoroutineScope,? super kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt;,? extends java.lang.Object&gt; action)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt kotlinx.coroutines.Job runWhenNeed(androidx.fragment.app.Fragment $this$runWhenNeed, kotlin.jvm.functions.Function2&lt;? super kotlinx.coroutines.CoroutineScope,? super kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt;,? extends java.lang.Object&gt; action)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt kotlinx.coroutines.Job runWhenStarted(androidx.fragment.app.Fragment $this$runWhenStarted, kotlin.jvm.functions.Function2&lt;? super kotlinx.coroutines.CoroutineScope,? super kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt;,? extends java.lang.Object&gt; action)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void showSoftKeyboard(com.google.android.material.textfield.TextInputEditText $this$showSoftKeyboard)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt void showToast(androidx.fragment.app.Fragment $this$showToast, java.lang.String message)" />
+      <entry_point TYPE="method" FQNAME="jafar.cicilan.utils.ExtensionsKt kotlinx.coroutines.Job runWhenResumed(androidx.fragment.app.Fragment $this$runWhenResumed, kotlin.jvm.functions.Function2&lt;? super kotlinx.coroutines.CoroutineScope,? super kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt;,? extends java.lang.Object&gt; action)" />
+    </entry_points>
+    <pattern value="jafar.cicilan.ui.main.AddCicilanViewModel" method="add" />
+    <pattern value="jafar.cicilan.ui.main.AddCicilanViewModel" />
+    <pattern value="jafar.cicilan.ui.main.AddCicilanViewModel" method="AddCicilanViewModel" />
+    <pattern value="jafar.cicilan.data.model.CalculateState" />
+    <pattern value="jafar.cicilan.data.model.CalculateState" method="CalculateState" />
+    <pattern value="jafar.cicilan.ui.main.home.current.CicilanBerjalanAdapter.ViewHolder" method="bind" />
+    <pattern value="jafar.cicilan.ui.main.home.current.CicilanBerjalanAdapter" />
+    <pattern value="jafar.cicilan.ui.main.home.current.CicilanBerjalanAdapter.ViewHolder" />
+    <pattern value="jafar.cicilan.ui.main.home.current.CicilanBerjalanAdapter.ViewHolder" method="ViewHolder" />
+    <pattern value="jafar.cicilan.ui.main.home.done.CicilanLunasAdapter.ViewHolder" method="bind" />
+    <pattern value="jafar.cicilan.ui.main.home.done.CicilanLunasAdapter" />
+    <pattern value="jafar.cicilan.ui.main.home.done.CicilanLunasAdapter.ViewHolder" />
+    <pattern value="jafar.cicilan.ui.main.home.done.CicilanLunasAdapter.ViewHolder" method="ViewHolder" />
+    <pattern value="jafar.cicilan.data.repository.CicilanRepository" />
+    <pattern value="jafar.cicilan.data.repository.CicilanRepository" method="delete" />
+    <pattern value="jafar.cicilan.data.repository.CicilanRepository" method="insertData" />
+    <pattern value="jafar.cicilan.utils.CustomClickListener" />
+    <pattern value="jafar.cicilan.utils.CustomClickListener" method="CustomClickListener" />
+    <pattern value="jafar.cicilan.ui.main.home.current.detail.DetailCicilanBerjalanFragment" />
+    <pattern value="jafar.cicilan.ui.main.home.current.detail.DetailCicilanBerjalanFragment" method="doPayCicilan" />
+    <pattern value="jafar.cicilan.ui.main.home.current.detail.DetailCicilanBerjalanFragment" method="setDetailData" />
+    <pattern value="jafar.cicilan.ui.main.home.current.detail.DetailCicilanBerjalanFragment" method="showDeleteDialog" />
+    <pattern value="jafar.cicilan.ui.main.home.done.detail.DetailCicilanLunasFragment" />
+    <pattern value="jafar.cicilan.ui.main.home.done.detail.DetailCicilanLunasFragment" method="setDetailData" />
+    <pattern value="jafar.cicilan.ui.main.home.done.detail.DetailCicilanLunasFragment" method="showDeleteDialog" />
+    <pattern value="jafar.cicilan.ui.main.DetailCicilanViewModel" method="delete" />
+    <pattern value="jafar.cicilan.ui.main.DetailCicilanViewModel" />
+    <pattern value="jafar.cicilan.ui.main.DetailCicilanViewModel" method="updateNominal" />
+    <pattern value="jafar.cicilan.ui.main.home.detail.history.DetailLogAdapter.ViewHolder" method="bind" />
+    <pattern value="jafar.cicilan.ui.main.home.detail.history.DetailLogAdapter" />
+    <pattern value="jafar.cicilan.ui.main.home.detail.history.DetailLogAdapter.ViewHolder" />
+    <pattern value="jafar.cicilan.ui.main.home.detail.history.DetailLogAdapter.ViewHolder" method="ViewHolder" />
+    <pattern value="jafar.cicilan.ui.main.form.add.FormAddFragment" method="convertCacheImageToExternalFileImage" />
+    <pattern value="jafar.cicilan.ui.main.form.add.FormAddFragment" />
+    <pattern value="jafar.cicilan.ui.main.SettingsViewModel" method="saveLangValue" />
+    <pattern value="jafar.cicilan.ui.main.SettingsViewModel" method="saveThemeValue" />
+    <pattern value="jafar.cicilan.ui.main.SettingsViewModel" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.05420219244823386" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,568 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionGroup="true"
+    tools:context="jafar.cicilan.ui.main.home.current.CurrentDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        style="@style/CustomAppBar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbarLayout"
+            style="@style/CustomCollapseLarge"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:toolbarId="@id/toolbar">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatarPreview"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="?attr/colorSecondaryContainer"
+                android:contentDescription="@string/avatar_preview_desc"
+                android:fitsSystemWindows="true"
+                android:transitionName="image.ForPreview"
+                app:layout_collapseMode="parallax"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Bottom" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolbarTheme"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/icon_arrow_back" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollBarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp">
+
+            <TextView
+                android:id="@+id/userNameContent"
+                style="@style/HeadingTitle"
+                android:layout_width="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Muhammad Jafar" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconCategory"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="24dp"
+                android:background="?attr/colorSecondaryContainer"
+                app:contentPadding="8dp"
+                app:layout_constraintStart_toStartOf="@+id/userNameContent"
+                app:layout_constraintTop_toBottomOf="@+id/userNameContent"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+                app:srcCompat="@drawable/icon_option_menu" />
+
+            <TextView
+                android:id="@+id/categoryTitle"
+                style="@style/BodySubTitle"
+                android:layout_marginStart="8dp"
+                android:text="@string/User_category"
+                app:layout_constraintStart_toEndOf="@+id/iconCategory"
+                app:layout_constraintTop_toTopOf="@+id/iconCategory" />
+
+            <TextView
+                android:id="@+id/categoryContent"
+                style="@style/BodyContent"
+                android:textColor="?attr/colorControlActivated"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/categoryTitle"
+                app:layout_constraintTop_toBottomOf="@+id/categoryTitle"
+                tools:text="Laptop" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iconDateCreated"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorSecondaryContainer"
+                app:contentPadding="8dp"
+                app:layout_constraintStart_toStartOf="@+id/iconCategory"
+                app:layout_constraintTop_toBottomOf="@+id/iconCategory"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+                app:srcCompat="@drawable/icon_date_create" />
+
+            <TextView
+                android:id="@+id/createdAtTitle"
+                style="@style/BodySubTitle"
+                android:layout_marginStart="8dp"
+                android:text="@string/created_at_title"
+                app:layout_constraintStart_toEndOf="@+id/iconDateCreated"
+                app:layout_constraintTop_toTopOf="@+id/iconDateCreated" />
+
+            <TextView
+                android:id="@+id/createdAtContent"
+                style="@style/BodyContent"
+                android:textColor="?attr/colorControlActivated"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/createdAtTitle"
+                app:layout_constraintTop_toBottomOf="@+id/createdAtTitle"
+                tools:text="20 Februari 2023" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/firstDivider"
+                style="@style/Widget.Material3.MaterialDivider.Heavy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconDateCreated" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerseparateProgress"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="32dp"
+                android:alpha="0"
+                app:layout_constraintBottom_toBottomOf="@+id/secondDivider"
+                app:layout_constraintEnd_toEndOf="@+id/firstDivider"
+                app:layout_constraintStart_toStartOf="@+id/firstDivider"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/targetProgressBar"
+                style="@style/Widget.Material3.CircularProgressIndicator.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:indicatorColor="@color/leaf"
+                app:indicatorSize="96dp"
+                app:layout_constraintEnd_toStartOf="@+id/dividerseparateProgress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstDivider"
+                app:showDelay="600"
+                app:trackColor="@color/rose"
+                app:trackCornerRadius="8dp"
+                app:trackThickness="8dp" />
+
+            <TextView
+                android:id="@+id/dataPersen"
+                style="@style/TextAppearance.Material3.HeadlineMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textColor="?attr/colorLeaf"
+                app:layout_constraintBottom_toBottomOf="@+id/targetProgressBar"
+                app:layout_constraintEnd_toEndOf="@+id/targetProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/targetProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/targetProgressBar"
+                tools:text="99" />
+
+            <TextView
+                android:id="@+id/dataTextPersen"
+                style="@style/BodyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/percent"
+                android:textColor="?attr/colorLeaf"
+                app:layout_constraintStart_toEndOf="@+id/dataPersen"
+                app:layout_constraintTop_toTopOf="@+id/dataPersen"
+                tools:text="99" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/dividerProgressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:alpha="0"
+                app:layout_constraintBottom_toBottomOf="@+id/targetProgressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dividerseparateProgress"
+                app:layout_constraintTop_toTopOf="@+id/targetProgressBar" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/leaf"
+                app:layout_constraintBottom_toBottomOf="@+id/lunasTitle"
+                app:layout_constraintEnd_toStartOf="@+id/lunasTitle"
+                app:layout_constraintStart_toStartOf="@+id/dividerProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/lunasTitle"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraSmall" />
+
+            <TextView
+                android:id="@+id/lunasTitle"
+                style="@style/BodyTitle"
+                android:layout_marginStart="24dp"
+                android:text="@string/lunas"
+                app:layout_constraintBottom_toTopOf="@+id/lunasContent"
+                app:layout_constraintStart_toStartOf="@+id/dividerProgressBar" />
+
+            <TextView
+                android:id="@+id/lunasContent"
+                style="@style/BodyHeadContent"
+                android:layout_marginBottom="4dp"
+                android:textColor="?attr/colorLeaf"
+                app:layout_constraintBottom_toTopOf="@+id/dividerProgressBar"
+                app:layout_constraintStart_toStartOf="@+id/lunasTitle"
+                tools:text="Rp 2.000.000,00" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/rose"
+                app:layout_constraintBottom_toBottomOf="@+id/sisaTitle"
+                app:layout_constraintEnd_toStartOf="@+id/sisaTitle"
+                app:layout_constraintStart_toStartOf="@+id/dividerProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/sisaTitle"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraSmall" />
+
+            <TextView
+                android:id="@+id/sisaTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="4dp"
+                android:text="@string/sisa"
+                app:layout_constraintStart_toStartOf="@+id/lunasContent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerProgressBar" />
+
+            <TextView
+                android:id="@+id/sisaContent"
+                style="@style/BodyHeadContent"
+                android:textColor="?attr/colorRose"
+                app:layout_constraintStart_toStartOf="@+id/sisaTitle"
+                app:layout_constraintTop_toBottomOf="@+id/sisaTitle"
+                tools:text="Rp 4.000.000,00" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/secondDivider"
+                style="@style/Widget.Material3.MaterialDivider.Heavy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/targetProgressBar" />
+
+            <TextView
+                android:id="@+id/detailLabaTitle"
+                style="@style/BodyTitle"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/detail_laba"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondDivider" />
+
+            <TextView
+                android:id="@+id/labaTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/laba"
+                app:layout_constraintStart_toStartOf="@+id/detailLabaTitle"
+                app:layout_constraintTop_toBottomOf="@+id/detailLabaTitle" />
+
+            <TextView
+                android:id="@+id/labaContent"
+                style="@style/BodyContent"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/labaPerBulanContent"
+                app:layout_constraintTop_toTopOf="@+id/labaTitle"
+                tools:text="Rp 75.000,00" />
+
+            <TextView
+                android:id="@+id/labaPerBulanContent"
+                style="@style/BodyContent"
+                android:layout_marginEnd="24dp"
+                android:text="@string/per_bulan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/labaTitle" />
+
+            <TextView
+                android:id="@+id/totalLabaTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_laba"
+                app:layout_constraintStart_toStartOf="@+id/labaTitle"
+                app:layout_constraintTop_toBottomOf="@+id/labaTitle" />
+
+            <TextView
+                android:id="@+id/totalLabaContent"
+                style="@style/BodyContent"
+                app:layout_constraintEnd_toEndOf="@+id/labaPerBulanContent"
+                app:layout_constraintTop_toTopOf="@+id/totalLabaTitle"
+                tools:text="Rp 375.000,00" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/thirdDivider"
+                style="@style/Widget.Material3.MaterialDivider.Heavy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalLabaTitle" />
+
+            <TextView
+                android:id="@+id/nominalTitle"
+                style="@style/BodyTitle"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/detail_nominal"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thirdDivider" />
+
+            <TextView
+                android:id="@+id/thingPriceTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/User_price"
+                app:layout_constraintStart_toStartOf="@+id/nominalTitle"
+                app:layout_constraintTop_toBottomOf="@+id/nominalTitle" />
+
+            <TextView
+                android:id="@+id/thingPriceContent"
+                style="@style/BodyContent"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/thingPriceTitle"
+                tools:text="Rp 2.000.000,00" />
+
+            <TextView
+                android:id="@+id/dpTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/User_first_pay"
+                app:layout_constraintStart_toStartOf="@+id/thingPriceTitle"
+                app:layout_constraintTop_toBottomOf="@+id/thingPriceTitle" />
+
+            <TextView
+                android:id="@+id/dpContent"
+                style="@style/BodyContent"
+                app:layout_constraintEnd_toEndOf="@+id/thingPriceContent"
+                app:layout_constraintTop_toTopOf="@+id/dpTitle"
+                tools:text="Rp 500.000,00" />
+
+            <TextView
+                android:id="@+id/nominalCicilanTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/user_nominal_cicilan"
+                app:layout_constraintStart_toStartOf="@+id/dpTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dpTitle" />
+
+            <TextView
+                android:id="@+id/nominalCicilanContent"
+                style="@style/BodyContent"
+                app:layout_constraintEnd_toEndOf="@+id/dpContent"
+                app:layout_constraintTop_toTopOf="@+id/nominalCicilanTitle"
+                tools:text="Rp 1.500.000,00" />
+
+            <TextView
+                android:id="@+id/nominalPerBulanTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/per_bulan_bayar"
+                app:layout_constraintStart_toStartOf="@+id/nominalCicilanTitle"
+                app:layout_constraintTop_toBottomOf="@+id/nominalCicilanTitle" />
+
+            <TextView
+                android:id="@+id/nominalPerBulanContent"
+                style="@style/BodyContent"
+                app:layout_constraintEnd_toEndOf="@+id/nominalCicilanContent"
+                app:layout_constraintTop_toTopOf="@+id/nominalPerBulanTitle"
+                tools:text="Rp 300.000,00" />
+
+            <TextView
+                android:id="@+id/totalPerBulanTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/total_per_bulan"
+                app:layout_constraintStart_toStartOf="@+id/nominalPerBulanTitle"
+                app:layout_constraintTop_toBottomOf="@+id/nominalPerBulanTitle" />
+
+            <TextView
+                android:id="@+id/totalPerBulanContent"
+                style="@style/BodyContent"
+                app:layout_constraintEnd_toEndOf="@+id/nominalPerBulanContent"
+                app:layout_constraintTop_toTopOf="@+id/totalPerBulanTitle"
+                tools:text="Rp 300.000,00" />
+
+            <TextView
+                android:id="@+id/periodeTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/User_duration_pay"
+                app:layout_constraintStart_toStartOf="@+id/totalPerBulanTitle"
+                app:layout_constraintTop_toBottomOf="@+id/totalPerBulanTitle" />
+
+            <TextView
+                android:id="@+id/periodeContent"
+                style="@style/BodyContent"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/periodeBulanContent"
+                app:layout_constraintTop_toTopOf="@+id/periodeTitle"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/periodeBulanContent"
+                style="@style/BodyContent"
+                android:text="@string/periode_bulan"
+                app:layout_constraintEnd_toEndOf="@+id/totalPerBulanContent"
+                app:layout_constraintTop_toTopOf="@+id/periodeTitle"
+                tools:text="Bulan" />
+
+            <TextView
+                android:id="@+id/tenggatTitle"
+                style="@style/BodyTitle"
+                android:layout_marginTop="16dp"
+                android:text="@string/expire_periode"
+                app:layout_constraintStart_toStartOf="@+id/periodeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/periodeTitle" />
+
+            <TextView
+                android:id="@+id/tenggatContent"
+                style="@style/BodyContent"
+                app:layout_constraintEnd_toEndOf="@+id/periodeBulanContent"
+                app:layout_constraintTop_toTopOf="@+id/tenggatTitle"
+                tools:text="20" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/fourDivider"
+                style="@style/Widget.Material3.MaterialDivider.Heavy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tenggatTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logTransactionButton"
+                style="@style/CustomTextButton"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/log_transaction"
+                android:textAlignment="textStart"
+                app:icon="@drawable/icon_notes"
+                app:iconPadding="16dp"
+                app:iconSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fourDivider"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/fiveDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                app:dividerInsetStart="64dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logTransactionButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editButton"
+                style="@style/CustomTextButton"
+                android:layout_marginTop="-5dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/edit_data"
+                android:textAlignment="textStart"
+                app:icon="@drawable/icon_edit"
+                app:iconPadding="16dp"
+                app:iconSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fiveDivider"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/sixDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                app:dividerInsetStart="64dp"
+                app:dividerColor="?attr/colorSurfaceVariant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                style="@style/CustomTextButton"
+                android:layout_marginTop="-5dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/delete_button"
+                android:textAlignment="textStart"
+                app:icon="@drawable/icon_delete"
+                app:iconPadding="16dp"
+                app:iconSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sixDivider"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.None" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBottomMenu"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/payDebtButton"
+                style="@style/CustomFilledButton"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/pay_debt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
+
+    <TextView
+        android:id="@+id/calculateTitle"
+        style="@style/BodySubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cicilan_per_bulan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calculateLabel"
+        style="@style/HeadingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/calculateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/calculateTitle"
+        tools:text="Rp 300.000,00" />
+
+    <TextView
+        android:id="@+id/labaTitle"
+        style="@style/BodySubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/laba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateLabel" />
+
+    <TextView
+        android:id="@+id/labaLabel"
+        style="@style/BodyContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labaTitle"
+        tools:text="Rp 75.000,00" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hargaInputLayout"
+        style="@style/CustomInputLayout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labaLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hargaInput"
+            style="@style/CustomInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/User_price"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dpInputLayout"
+        style="@style/CustomInputLayout"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hargaInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dpInput"
+            style="@style/CustomInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/User_first_pay"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/periodeInputLayout"
+        style="@style/CustomInputLayout"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dpInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/periodeInput"
+            style="@style/CustomInputText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/User_duration_pay"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
